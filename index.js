@@ -274,11 +274,7 @@ bot.onText(/\/list/, msg => {
                 let totalbreak = d.diff(c, 'hours') > 0 ? d.diff(c, 'hours') : d.diff(c, 'minutes');
                 
 
-                let difference = moment.duration(b.diff(a, 'hours')).subtract(totalbreak) > 0
-                ? (moment.duration(b.diff(a, 'hours')).subtract(totalbreak) > 1 ? 
-                    moment.duration(b.diff(a, 'hours')).subtract(totalbreak)+" hours" : moment.duration(b.diff(a, 'hours')).subtract(totalbreak)+" hour")
-                : (moment.duration(b.diff(a, 'minutes')).subtract(totalbreak) > 1 ? 
-                    moment.duration(b.diff(a, 'minutes')).subtract(totalbreak)+" minutes" : moment.duration(b.diff(a, 'minutes')).subtract(totalbreak)+" minute");
+                let difference = moment.duration(b.diff(a, 'hours')).subtract(totalbreak)+" hours"
                 
                 let fortotal = moment.duration(b.diff(a, 'minutes')).subtract(totalbreak);
 
