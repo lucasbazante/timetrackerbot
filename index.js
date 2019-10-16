@@ -251,7 +251,7 @@ bot.onText(/\/endbreak/, msg => {
 bot.onText(/\/list/, msg => {
     let id = msg.chat.id;
     let tracker = "*All tasks*: \n\n";
-    let total = "";
+    let total = 0;
     check.find({userid:id}, function(err,docs){
         if(!docs.length) {
             tracker = "*No tasks to show! Create a new task with /checkin*"
