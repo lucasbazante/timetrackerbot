@@ -271,14 +271,14 @@ bot.onText(/\/list/, msg => {
                 let endbreak = new moment(item.endbreak).format("MMM DD/MM/YYYY, HH:mm");
                 let c = new moment(item.break);
                 let d = new moment(item.endbreak);
-                let totalbreak = d.diff(c, 'hours') > 0 ? d.diff(c, 'hours') : d.diff(c, 'minutes');
+                let totalbreak = d.diff(c, 'minutes');
                 
 
-                let difference = moment.duration(b.diff(a, 'hours')).subtract(moment(totalbreak)) > 0
-                ? (moment.duration(b.diff(a, 'hours')).subtract(moment.duration(totalbreak)) > 1 ? 
-                    moment.duration(b.diff(a, 'hours')).subtract(moment.duration(totalbreak))+" hours" : moment.duration(b.diff(a, 'hours')).subtract(moment.duration(totalbreak))+" hour")
-                : (moment.duration(b.diff(a, 'minutes')).subtract(moment.duration(totalbreak)) > 1 ? 
-                    moment.duration(b.diff(a, 'minutes')).subtract(moment.duration(totalbreak))+" minutes" : moment.duration(b.diff(a, 'minutes')).subtract(moment.duration(totalbreak))+" minute");
+                let difference = moment.duration(b.diff(a, 'hours')).subtract(moment(totalbreak, 'minutes')) > 0
+                ? (moment.duration(b.diff(a, 'hours')).subtract(moment.duration(totalbreak, 'minutes')) > 1 ? 
+                    moment.duration(b.diff(a, 'hours')).subtract(moment.duration(totalbreak, 'minutes'))+" hours" : moment.duration(b.diff(a, 'hours')).subtract(moment.duration(totalbreak, 'minutes'))+" hour")
+                : (moment.duration(b.diff(a, 'minutes')).subtract(moment.duration(totalbreak, 'minutes')) > 1 ? 
+                    moment.duration(b.diff(a, 'minutes')).subtract(moment.duration(totalbreak, 'minutes'))+" minutes" : moment.duration(b.diff(a, 'minutes')).subtract(moment.duration(totalbreak, 'minutes'))+" minute");
                 
                 let fortotal = moment.duration(b.diff(a, 'minutes')).subtract(totalbreak);
 
