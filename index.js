@@ -273,14 +273,13 @@ bot.onText(/\/list/, msg => {
                 let d = new moment(item.endbreak);
                 let totalbreak = d.diff(c, 'hours') > 0 ? d.diff(c, 'hours') : d.diff(c, 'minutes');
                 
-
                 let difference = moment.duration(b.diff(a, 'hours')).subtract(totalbreak)+" hours"
                 
                 let fortotal = moment.duration(b.diff(a, 'minutes')).subtract(totalbreak);
 
-                totalbreak = d.diff(c, 'hours') > 0 ? 
-                (d.diff(c, 'hours') == 1 ? d.diff(c, 'hours')+" hour" : d.diff(c, 'hours')+" hours") 
-                : (d.diff(c, 'minutes') == 1 ? d.diff(c, 'minutes')+" minute" : d.diff(c, 'minutes')+" minutes");
+                // totalbreak = d.diff(c, 'hours') > 0 ? 
+                // (d.diff(c, 'hours') == 1 ? d.diff(c, 'hours')+" hour" : d.diff(c, 'hours')+" hours") 
+                // : (d.diff(c, 'minutes') == 1 ? d.diff(c, 'minutes')+" minute" : d.diff(c, 'minutes')+" minutes");
                 
                 total+=fortotal;
                 tracker+=`*Task:* ${name}\n*Checkin at* ${checkin}\n*Checkout at* ${checkout}\n*Break of* ${totalbreak}\n*Total spent in task*: ${difference} \n\n`;
