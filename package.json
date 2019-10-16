@@ -1,0 +1,20 @@
+{
+  "name": "timetracker",
+  "version": "1.0.0",
+  "description": "A time tracker bot to help you see how much time you spend doing any tasks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node server.js"
+  },
+  "author": "lucasbazante",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.7.5",
+    "node-telegram-bot-api": "^0.30.0",
+    "socket.io": "^2.3.0"
+  }
+}
