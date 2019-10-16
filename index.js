@@ -124,7 +124,7 @@ bot.onText(/\/checkin/, msg => {
 })
 
 bot.onText(/\/checkout/, msg => {
-  let date = new Date();
+  let date = new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"});;;
 
   let lastcmd = lastcommand
     .slice()
@@ -171,7 +171,7 @@ bot.onText(/\/checkout/, msg => {
 })
 
 bot.onText(/\/break/, msg => {
-  let date = new Date()
+  let date = new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"});;
 
   let parsedDate = date
 
@@ -215,7 +215,7 @@ bot.onText(/\/break/, msg => {
 })
 
 bot.onText(/\/endbreak/, msg => {
-  let date = new Date();
+  let date = new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"});;;
   let parsedDate = date
 
   let lastcmd = lastcommand
