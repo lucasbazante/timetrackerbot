@@ -53,7 +53,7 @@ bot.onText(/\/sendpic/, msg => {
 })
 
 bot.onText(/\/checkin/, msg => {
-  let date = new Date();
+  let date = new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"});;
 
   let lastcmd = lastcommand
     .slice()
