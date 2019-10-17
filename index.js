@@ -359,3 +359,8 @@ bot.onText(/\/deltasks/, function(msg, match) {
         });
     });
 });
+
+
+bot.onText(/\/ajudaaquipfv/, msg => {
+    bot.sendMessage(msg.chat.id, "vcs tão fraco demais\npqp\ntão pesquisando com o *cu*", { parse_mode: 'Markdown' });
+});
